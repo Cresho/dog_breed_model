@@ -1,13 +1,8 @@
 from keras.preprocessing import image
-from keras.models import Model
 from keras.models import load_model
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import os
-import customtkinter
 from tkinter import *
-from tkinter import ttk
 from tkinter import filedialog as fd
 from PIL import Image, ImageTk
 
