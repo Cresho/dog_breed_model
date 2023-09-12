@@ -9,7 +9,7 @@ from PIL import Image, ImageTk
 image_references = []
 file_paths = []
 
-def predict_from_image():
+def Predict():
     img = image.load_img(file_paths[-1], target_size=(299, 299))
     img_tensor = image.img_to_array(img)                   
     img_tensor = np.expand_dims(img_tensor, axis=0)       
@@ -64,7 +64,7 @@ placeholder = image.load_img("placeholder.jpg", target_size=(395, 395))
 placeholderPhoto = ImageTk.PhotoImage(placeholder)
 
 loadButton = Button(frame, text="Choose Image", font=('Calibri Bold', 10), width=26, height=2, command=LoadImage).grid(row=1, column=0, columnspan=2, padx=5, sticky=W)
-classificateButton = Button(frame, text="Generate Results", font=('Calibri Bold', 10), width=26, height=2, command=predict_from_image).grid(row=1, column=2, columnspan=2, padx=0, sticky=W)
+classificateButton = Button(frame, text="Generate Results", font=('Calibri Bold', 10), width=26, height=2, command=Predict).grid(row=1, column=2, columnspan=2, padx=0, sticky=W)
 blankLabel = Label(frame, image=placeholderPhoto, anchor=CENTER).grid(row=2, column=0, rowspan=3,columnspan=3)
 resultLabel = Label(frame, text="Results:", font=('Calibri Bold', 24), anchor=CENTER).grid(row=9, column=0, columnspan=4)
 
