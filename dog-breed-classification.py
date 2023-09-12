@@ -45,9 +45,9 @@ def LoadImage():
     image_references.append(photo_image)
 
 
-num_classes = 12
+num_classes = 80
 
-model = load_model('2023-09-11_dog_breed_model.h5')
+model = load_model('2023-09-12_dog_breed_model.h5')
 df = pd.read_csv('labels.csv')
 selected_breed_list = list(df.groupby('breed').count().sort_values(by='id', ascending=False).head(num_classes).index)
 
